@@ -4,41 +4,30 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.Write("What is your grade percentage? ");
-        string grade = Console.ReadLine();
-        int percent = int.Parse(grade);
+       Job job1 = new Job();
+       job1. _jobTitle = "Computer Programmer";
+       job1. _company = "Microsoft";
+       job1. _startYear = 2019;
+       job1. _endYear = 2022;
 
-        string letter = "";
-        if (percent >= 90)
-        {
-            letter = "A";
-        }
-        else if (percent >= 80)
-        {
-            letter = "B";
-        }
-        else if (percent >= 70)
-        {
-            letter = "C";
-        }
-        else if (percent >= 60)
-        {
-            letter = "D";
-        }
-        else
-        {
-            letter = "F";
-        }
+       Job job2 = new Job();
+       job2. _jobTitle = "Front-end Developer";
+       job2. _company = "Apple";
+       job2. _startYear = 2022;
+       job2. _endYear = 2023;
 
-        Console.WriteLine($"Your grade is: {letter}");
+       Resume myResume = new Resume();
+       myResume. _name = "Disney Cal";
 
-        if (percent >= 70)
-        {
-            Console.WriteLine("Congrats you passed!");
-        }
-        else
-        {
-            Console.WriteLine("Make better next time!");
-        }
-    }    
-}
+       myResume. _jobs.Add(job1);
+       myResume. _jobs.Add(job2);
+
+       myResume.Display();
+
+    }
+
+    }
+
+
+
+
