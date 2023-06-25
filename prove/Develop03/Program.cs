@@ -5,22 +5,33 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Hello Develop03 World!");
+        ScriptureList scriptureList = new ScriptureList(
+            "D&C 59:3",
+            "D&C 64:34",
+            "D&C 93:1",
+            "D&C 89:18"
+        );
+
         
-        Fraction f1 = new Fraction();
-        Console.WriteLine(f1.GetFractionString());
-        Console.WriteLine(f1.GetDecimalValue());
+        scriptureList.ShowScriptures();
 
-        Fraction f2 = new Fraction(5);
-        Console.WriteLine(f2.GetFractionString());
-        Console.WriteLine(f2.GetDecimalValue());
-
-        Fraction f3 = new Fraction(3, 4);
-        Console.WriteLine(f3.GetFractionString());
-        Console.WriteLine(f3.GetDecimalValue());
-
-        Fraction f4 = new Fraction(1,3);
-        Console.WriteLine(f4.GetFractionString());
-        Console.WriteLine(f4.GetDecimalValue());
         
+        scriptureList.AddScripture("Alma 3:26-27");
+
+        
+        scriptureList.ShowScriptures();
+
+        
+        scriptureList.RemoveScripture("D&C 93:1");
+
+        
+        scriptureList.ShowScriptures();
+
+        
+        scriptureList.ClearScriptures();
+
+        
+        scriptureList.ShowScriptures();
     }
+    
 }
