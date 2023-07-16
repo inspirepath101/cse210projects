@@ -1,5 +1,5 @@
-public class PromptGenerator
-
+public class PromptGenerator 
+{
     List<string> prompts;
     
     public PromptGenerator()
@@ -19,10 +19,11 @@ public class PromptGenerator
         string randomPrompt = "";
         int randomIndex = new Random().Next(prompts.Count);
 
-        randomPrompt = prompts[randomindex];
+        randomPrompt = prompts[randomIndex];
 
         return randomPrompt;
     }
+}
 
 
 

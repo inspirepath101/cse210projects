@@ -1,5 +1,0 @@
-Write~~~~
-~Display~~~
-~~Load~~
-~~~Save~
-~~~~Quit
