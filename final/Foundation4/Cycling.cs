@@ -1,10 +1,21 @@
-public class Cycling : Activity
+
+
+
+class Cycling : Activity
 {
-  private float minutes = "";
+    private string _activityTitle;
+    public Cycling(string activityTitle, int minutes,)
+        :base(activityTitle, minutes)
+    {
 
+        _activityTitle = activityTitle;
+    }
+     public string GetCyclingInformation()
+    {
+       
+        string activityTime = GetActivityTime();
 
-  public override float Minutes()
-  {
-    return minutes; 
-  }
+        return $"{_activityTitle} by {activitytTime}";
+    }
 }
+      
